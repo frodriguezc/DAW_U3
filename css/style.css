@@ -1,0 +1,79 @@
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: black;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: green;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+footer {
+    background-color: #303030;
+    padding: 32px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: green !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
