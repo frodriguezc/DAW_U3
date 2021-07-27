@@ -1,0 +1,5 @@
+html, body{background-image:url(Images/fondo.png)}
+
+.Historia{position:absolute; height: 1000px; width: 900px; margin-top: auto; background-color: cornsilk; border-radius: 30px; margin-left: 230}
+
+img{margin-left: 60; height: 350;width: 300; margin-top: 30}
