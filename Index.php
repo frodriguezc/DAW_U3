@@ -18,6 +18,12 @@
 </head>
 
 <body>
+<?php
+	include("cx.php");
+	$link = conectar();
+	//Ejecutar la consulta para obtener información de la tabla.
+	$resultado = mysqli_query($link, "select * from users");
+?>
 
   <!-- Contenido de la página web -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -60,14 +66,15 @@
       <h4 class="item">¡¡Bienvenidos a Ashes of the Soul!!</h4>
       <a href="Galeria.php"><img src="Ashes.png" alt="Ashes" style="border-radius:40px;"></a>
       <br></br>
-      <h4>Un escultor muy interesante<br><span>Con sus diferentes escultaras...</span></h4><br>
+      <h4>Un escultor muy interesante<br><span>Con sus diferentes esculturas...</span></h4><br>
 
     </div>
   </div>
 
   <div class="container p-4">
-    <?php include("conexion.php");
-                        if(isset($_SESSION['message'])){?>
+    <?php
+      if(isset($_SESSION['message'])){
+        ?>
     <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
       <?=  $_SESSION['message']?>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -78,7 +85,7 @@
     <div class="row">
       <div class="col-md-4 mx-auto">
         <div class="card card-body">
-          <form method="post" name="form" onsubmit="return validarform()" action="create.php">
+          <form method="post" name="form" action="create.php">
             <div class="form-group">
               <input type="text" name="id" class="form-control" placeholder="Ingresa RUT" autocomplete="off" autofocus>
             </div>
@@ -125,30 +132,33 @@
           </thead>
           <tbody>
             <?php 
-                                        $query = "SELECT * FROM datos";
-                                        $result = mysqli_query($conn, $query);
-                                        while($row = mysqli_fetch_array($result)){ 
-                                        #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
-                            ?>
+
+$link = conectar();
+//Ejecutar la consulta para obtener información de la tabla.
+$resultado = mysqli_query($link, "select * from users");
+
+              while($row = mysqli_fetch_array($resultado)){ 
+              #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
+              ?>
                             
             <tr>
               <td>
-                <?php echo $row['id'] ?>
+                <?php echo $row['rut'] ?>
               </td>
               <td>
                 <?php echo $row['nombre'] ?>
               </td>
               <td>
-                <?php echo $row['dirrecion'] ?>
+                <?php echo $row['direccion'] ?>
               </td>
               <td>
                 <?php echo $row['telefono'] ?>
               </td>
               <td>
-                <a href="update.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+                <a href="update.php?id=<?php echo $row['rut']?>" class="btn btn-secondary">
                   <i class="fa fa-edit"></i>
                 </a>
-                <a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+                <a href="delete.php?id=<?php echo $row['rut']?>" class="btn btn-danger">
                   <i class="fa fa-trash"></i>
                 </a>
               </td>
