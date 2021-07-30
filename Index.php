@@ -5,36 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>PHP MsSQL CRUD</title>
+  <title>Ashes Of The Soul</title>
 
   <!-- Stylesheet para vista index -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Link Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <!-- Link Opcional de JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  <!-- Link Opcional de JavaScript -->
 
 </head>
 
 <body>
-<?php
-	include("cx.php");
-	$link = conectar();
-	//Ejecutar la consulta para obtener información de la tabla.
-	$resultado = mysqli_query($link, "select * from users");
-?>
+  <?php
+  include("cx.php");
+  $link = conectar();
+  //Ejecutar la consulta para obtener información de la tabla.
+  $resultado = mysqli_query($link, "select * from users");
+  ?>
 
   <!-- Contenido de la página web -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="Ashes-logo.png" class="img-responsive" alt="Responsive image"
-          style="width:100px; border-radius:40px;">
+        <img src="Ashes-logo.png" class="img-responsive" alt="Responsive image" style="width:100px; border-radius:40px;">
 
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -64,24 +60,33 @@
 
     <div class="text-center">
       <h4 class="item">¡¡Bienvenidos a Ashes of the Soul!!</h4>
-      <a href="Galeria.php"><img src="Ashes.png" alt="Ashes" style="border-radius:40px;"></a>
+      <a href="Galeria.php"><img src="Ashes.png" alt="Ashes"></a>
       <br></br>
       <h4>Un escultor muy interesante<br><span>Con sus diferentes esculturas...</span></h4><br>
 
     </div>
   </div>
 
+  <!-- carrusel -->
+
+  <!-- fin carrusel -->
+
+
+
+
   <div class="container p-4">
     <?php
-      if(isset($_SESSION['message'])){
-        ?>
-    <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-      <?=  $_SESSION['message']?>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <?php session_unset(); } #Libera todas las variables de sesión ?>
+    if (isset($_SESSION['message'])) {
+    ?>
+      <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message'] ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <?php session_unset();
+    } #Libera todas las variables de sesión 
+    ?>
     <div class="row">
       <div class="col-md-4 mx-auto">
         <div class="card card-body">
@@ -90,28 +95,22 @@
               <input type="text" name="id" class="form-control" placeholder="Ingresa RUT" autocomplete="off" autofocus>
             </div>
             <div class="form-group">
-              <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre" autocomplete="off"
-                required>
+              <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre" autocomplete="off" required>
             </div>
             <div class="form-group">
-              <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección" autocomplete="off"
-                required>
+              <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección" autocomplete="off" required>
             </div>
             <div class="form-group">
-              <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna" autocomplete="off"
-                required>
+              <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna" autocomplete="off" required>
             </div>
             <div class="form-group">
-              <input type="text" name="region" class="form-control" placeholder="Ingresa Región" autocomplete="off"
-                required>
+              <input type="text" name="region" class="form-control" placeholder="Ingresa Región" autocomplete="off" required>
             </div>
             <div class="form-group">
-              <input type="phone" name="phone" class="form-control" placeholder="Ingresa Teléfono" autocomplete="off"
-                required>
+              <input type="phone" name="phone" class="form-control" placeholder="Ingresa Teléfono" autocomplete="off" required>
             </div>
             <div class="form-group">
-              <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail" autocomplete="off"
-                required>
+              <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail" autocomplete="off" required>
             </div>
             <input type="submit" class="btn btn-outline-success btn-block" name="send" value="Agregar">
             <input type="reset" class="btn btn-outline-secondary btn-block" value="Limpiar">
@@ -131,38 +130,37 @@
             </tr>
           </thead>
           <tbody>
-            <?php 
+            <?php
 
-$link = conectar();
-//Ejecutar la consulta para obtener información de la tabla.
-$resultado = mysqli_query($link, "select * from users");
+            $link = conectar();
+            //Ejecutar la consulta para obtener información de la tabla.
+            $resultado = mysqli_query($link, "select * from users");
 
-              while($row = mysqli_fetch_array($resultado)){ 
+            while ($row = mysqli_fetch_array($resultado)) {
               #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
-              ?>
-                            
-            <tr>
-              <td>
-                <?php echo $row['rut'] ?>
-              </td>
-              <td>
-                <?php echo $row['nombre'] ?>
-              </td>
-              <td>
-                <?php echo $row['direccion'] ?>
-              </td>
-              <td>
-                <?php echo $row['telefono'] ?>
-              </td>
-              <td>
-                <a href="update.php?id=<?php echo $row['rut']?>" class="btn btn-secondary">
-                  <i class="fa fa-edit"></i>
-                </a>
-                <a href="delete.php?id=<?php echo $row['rut']?>" class="btn btn-danger">
-                  <i class="fa fa-trash"></i>
-                </a>
-              </td>
-            </tr>
+            ?>
+              <tr>
+                <td>
+                  <?php echo $row['rut'] ?>
+                </td>
+                <td>
+                  <?php echo $row['nombre'] ?>
+                </td>
+                <td>
+                  <?php echo $row['direccion'] ?>
+                </td>
+                <td>
+                  <?php echo $row['telefono'] ?>
+                </td>
+                <td>
+                  <a href="update.php?id=<?php echo $row['rut'] ?>" class="btn btn-secondary">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="delete.php?id=<?php echo $row['rut'] ?>" class="btn btn-danger">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                </td>
+              </tr>
             <?php } ?>
           </tbody>
         </table>
@@ -179,22 +177,12 @@ $resultado = mysqli_query($link, "select * from users");
 
     <p style="color: white;">Redes Sociales</p>
 
-    <img src="Banner_1.jpg" class="img-responsive" alt="Responsive image "
-      style="height:  100px; width: 100%; margin-top: 0%">
-    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image"
-      style="width: 300px; border-radius: 30px;">
+    <img src="Banner_1.jpg" class="img-responsive" alt="Responsive image " style="height:  100px; width: 100%; margin-top: 0%">
+    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image" style="width: 300px; border-radius: 30px;">
   </footer>
   <!-- Scripts de JavaScript-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 
 </html>

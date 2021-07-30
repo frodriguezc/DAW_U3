@@ -77,3 +77,13 @@ footer {
         margin: 25px 0;
     }
 }
+
+.carrusel {
+    border: 1px solid #000;
+    max-width: 100px !important;
+    max-height: 100px !important;
+    object-fit: contain !important;
+}
+.carousel .carousel-inner .carousel-item img {
+    max-height: 200vh !important;
+ }
