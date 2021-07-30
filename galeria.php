@@ -156,7 +156,7 @@ p{
   <div class="row text-center">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <a href="servicios.php"><img src="armadura.jpg" alt="Armadura" width="400px" height="400px" style="border-radius:40px ;"></a>
+        <a href="servicios.php"><img src="img/armadura.jpg" alt="Armadura" width="400px" height="400px" style="border-radius:40px ;"></a>
         <p style="color: white;"><strong>Escultura de armadura</strong></p>
         <p>Una escultura de cuerpo completo</p>
       </div>

@@ -18,42 +18,12 @@
 </head>
 
 <body>
-<!--navbar-->
-<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">-->
-<!--    <div class="container">-->
-<!--        <a class="navbar-brand" href="#">-->
-<!--            <img src="Ashes-logo.png" class="img-responsive" alt="Responsive image" style="width:100px; border-radius:40px;">-->
-<!---->
-<!--        </a>-->
-<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarResponsive">-->
-<!--            <ul class="navbar-nav ml-auto">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="index.php">Quiénes Somos-->
-<!--                        <span class="sr-only">(current)</span>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="galeria.php">Galería</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="servicios.php">Servicios</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="contacto.php">Contacto</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container-fluid">
-        <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid ">
+        <div class="container ">
             <a class="navbar-brand" href="index.php">
-                <img src="img/ashes_logo.png" alt="Home" style="max-width:150px; border-radius:20px;"
+                <img src="img/ashes_logo.png" alt="Home"
                      class="img-responsive">
             </a>
         </div>
@@ -62,7 +32,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                 </li>
@@ -77,7 +47,7 @@
                        data-bs-toggle="dropdown" aria-expanded="false">
                         admin
                     </a>
-                    <ul class="dropdown-menu bg-dark align-content-center" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="login.php">Ingreso</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
                     </ul>
@@ -87,7 +57,7 @@
     </div>
 </nav>
 
-<br><br>
+<br/><br/>
 
 
 <!-- Contenido de la página web -->
@@ -99,14 +69,52 @@
     <div class="text-center">
         <h4 class="item">¡¡Bienvenidos a Ashes of the Soul!!</h4>
         <a href="galeria.php"><img src="Ashes.png" alt="Ashes"></a>
-        <br></br>
+        <br/>
+        <br/>
         <h4>Un escultor muy interesante<br><span>Con sus diferentes esculturas...</span></h4><br>
 
     </div>
 </div>
 
 <!-- carrusel -->
-
+<div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active align-middle d-flex">
+            <img src="img/esc1.jpg" class="img-fluid center-block d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/esc2.jpg" class="img-fluid center-block d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/esc3.jpg" class="img-fluid center-block d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/esc4.jpg" class="img-fluid center-block d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/esc5.jpg" class="img-fluid center-block d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/esc6.jpg" class="img-fluid center-block d-block w-100 h-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 <!-- fin carrusel -->
 
 <!--conexion a la bd-->
@@ -135,32 +143,46 @@ $resultado = mysqli_query($link, "select * from users");
             <div class="card card-body">
                 <form method="post" name="form" action="create.php">
                     <div class="form-group">
-                        <input type="text" name="id" class="form-control" placeholder="Ingresa RUT" autocomplete="off"
-                               autofocus>
+                        <label>
+                            <input type="text" name="id" class="form-control" placeholder="Ingresa RUT" autocomplete="off"
+                                   autofocus>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre"
-                               autocomplete="off" required>
+                        <label>
+                            <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre"
+                                   autocomplete="off" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección"
-                               autocomplete="off" required>
+                        <label>
+                            <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección"
+                                   autocomplete="off" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna"
-                               autocomplete="off" required>
+                        <label>
+                            <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna"
+                                   autocomplete="off" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="region" class="form-control" placeholder="Ingresa Región"
-                               autocomplete="off" required>
+                        <label>
+                            <input type="text" name="region" class="form-control" placeholder="Ingresa Región"
+                                   autocomplete="off" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="phone" name="phone" class="form-control" placeholder="Ingresa Teléfono"
-                               autocomplete="off" required>
+                        <label>
+                            <input type="tel" name="phone" class="form-control" placeholder="Ingresa Teléfono"
+                                   autocomplete="off" required>
+                        </label>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail"
-                               autocomplete="off" required>
+                        <label>
+                            <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail"
+                                   autocomplete="off" required>
+                        </label>
                     </div>
                     <input type="submit" class="btn btn-outline-success btn-block" name="send" value="Agregar">
                     <input type="reset" class="btn btn-outline-secondary btn-block" value="Limpiar">
@@ -233,6 +255,7 @@ $resultado = mysqli_query($link, "select * from users");
          style="width: 300px; border-radius: 30px;">
 </footer>
 <!-- Scripts de JavaScript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>

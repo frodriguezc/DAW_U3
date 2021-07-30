@@ -134,7 +134,7 @@
 
     <div class="text-center">
        <h4 class="item">¡¡Gracias por haber entregado tu comentario¡¡</h4>
-      <img src="agradecimiento.gif" alt="Agradecimiento" style="border-radius:40px;">
+      <img src="img/agradecimiento.gif" alt="Agradecimiento" style="border-radius:40px;">
        <br></br>
         <h4>Esperamos que te gustara la pagina<br><span>Nos vemos en otro momento, hasta la próxima...</span></h4><br>
      
