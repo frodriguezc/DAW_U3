@@ -117,6 +117,8 @@
 </div>
 <!-- fin carrusel -->
 
+
+<!--TODO: sacar esto para la pagina de contacto-->
 <!--conexion a la bd-->
 <?php
 include("cx.php");
