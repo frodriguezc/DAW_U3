@@ -113,7 +113,7 @@
     <a class="navbar-brand" href="#">
           
 		
-			<a href="Index.php"><img src="Ashes-logo.png" class="img-responsive" alt="Responsive image"  style="width:100px; border-radius: 40px;"></a>
+			<a href="index.php"><img src="img/ashes_logo.png" class="img-responsive" alt="Responsive image" style="width:100px; border-radius: 40px;"></a>
 		
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,18 +122,18 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="Index.php">Quiénes Somos
+          <a class="nav-link" href="index.php">Quiénes Somos
                 <span class="sr-only">(current)</span>
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Galeria.php">Galería</a>
+          <a class="nav-link" href="galeria.php">Galería</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Servicios.php">Servicios</a>
+          <a class="nav-link" href="servicios.php">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Contacto.php">Contacto</a>
+          <a class="nav-link" href="contacto.php">Contacto</a>
         </li>
       </ul>
     </div>
@@ -154,21 +154,21 @@
       <div class="thumbnail">
         <a href="artista/obras.php"><img src="IMG14.jpg" alt="obras" width="400px" height="400px" style="border-radius:40px;"></a>
         <p><strong>unos de sus trabajos</strong></p>
-        <a href="Contacto.php"><p style="color: white;">Comenta aquí...</p></a>
+        <a href="contacto.php"><p style="color: white;">Comenta aquí...</p></a>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <a href="artista/Artista.php"><img src="art.png" alt="Artista" width="400px" height="400px" style="border-radius:40px;"></a>
         <p><strong>Artista J. Manuel Gris Alis: Ashes</strong></p>
-        <a href="Contacto.php"><p style="color: white;">Que te parecio...</p></a>
+        <a href="contacto.php"><p style="color: white;">Que te parecio...</p></a>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
        <a href="artista/experiencia.php"><img src="exart.png" alt="Experiencia" width="400px" height="400px" style="border-radius: 40px;"></a>
         <p><strong>Experiencia con su arte</strong></p>
-        <a href="Contacto.php"><p style="color: white;">Pregunta aquí...</p></a>
+        <a href="contacto.php"><p style="color: white;">Pregunta aquí...</p></a>
       </div>
     </div>
   </div>
