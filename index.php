@@ -42,37 +42,34 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registro.php">Registro</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        admin
+                        Ingreso
                     </a>
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Ingreso</a></li>
+                        <li><a class="dropdown-item" href="login.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+                        <li><a class="dropdown-item" href="admin.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-
 <br/><br/>
-
-
 <!-- Contenido de la página web -->
-
 <!-- Apertura del contenedor de la página web -->
-
 <div class="container">
-
     <div class="text-center">
         <h4 class="item">¡¡Bienvenidos a Ashes of the Soul!!</h4>
         <a href="galeria.php"><img src="Ashes.png" alt="Ashes"></a>
         <br/>
         <br/>
         <h4>Un escultor muy interesante<br><span>Con sus diferentes esculturas...</span></h4><br>
-
     </div>
 </div>
 
@@ -125,19 +122,14 @@
 </div>
 <!-- fin carrusel -->
 
-
-<!--TODO: sacar esto para la pagina de contacto-->
-<!--Scripts-->
-
 <!--Pie de la página -->
 <footer class="text-center">
+    <link rel="stylesheet" href="css/style_foot.css"/>
 
-    <p style="color: white;">Redes Sociales</p>
+    <h2>Redes Sociales</h2>
 
-    <img src="Banner_1.jpg" class="img-responsive" alt="Responsive image "
-         style="height:  100px; width: 100%; margin-top: 0%">
-    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image"
-         style="width: 300px; border-radius: 30px;">
+    <img src="img/Banner_1.jpg" class="img-responsive foot1" alt="Ashes Of The Soul">
+    <img src="img/redes-sociales.jpg" class="img-responsive foot2" alt="Redes Sociales">
 </footer>
 <!-- Scripts de JavaScript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

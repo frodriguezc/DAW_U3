@@ -107,21 +107,21 @@
   <div class="row text-center">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <a href="artista/obras.php"><img src="IMG14.jpg" alt="obras" width="400px" height="400px" style="border-radius:40px;"></a>
+        <a href="artista/obras.php"><img src="img/IMG14.jpg" alt="obras" width="400px" height="400px" style="border-radius:40px;"></a>
         <p><strong>unos de sus trabajos</strong></p>
         <a href="contacto.php"><p style="color: white;">Comenta aquí...</p></a>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <a href="artista/Artista.php"><img src="art.png" alt="Artista" width="400px" height="400px" style="border-radius:40px;"></a>
+        <a href="artista/Artista.php"><img src="img/art.png" alt="Artista" width="400px" height="400px" style="border-radius:40px;"></a>
         <p><strong>Artista J. Manuel Gris Alis: Ashes</strong></p>
         <a href="contacto.php"><p style="color: white;">Que te parecio...</p></a>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-       <a href="artista/experiencia.php"><img src="exart.png" alt="Experiencia" width="400px" height="400px" style="border-radius: 40px;"></a>
+       <a href="artista/experiencia.php"><img src="img/exart.png" alt="Experiencia" width="400px" height="400px" style="border-radius: 40px;"></a>
         <p><strong>Experiencia con su arte</strong></p>
         <a href="contacto.php"><p style="color: white;">Pregunta aquí...</p></a>
       </div>
@@ -135,8 +135,8 @@
  
 	<p style="color: white;">Redes Sociales</p> 
   		
-		<img src="Banner_1.jpg" class="img-responsive" alt="Responsive image "style="height:  100px; width: 100%; margin-top: 0%">
-    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image" style="width: 300px; border-radius: 30px;">
+		<img src="img/Banner_1.jpg" class="img-responsive" alt="Responsive image " style="height:  100px; width: 100%; margin-top: 0%">
+    <img src="img/redes-sociales.jpg" class="img-responsive" alt="Responsive image" style="width: 300px; border-radius: 30px;">
 	  </footer>
 
 

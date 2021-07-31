@@ -87,13 +87,13 @@ footer {
 
 .carrusel {
     border: 1px solid #000;
-    max-width: 100px !important;
-    max-height: 100px !important;
-    object-fit: contain !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    object-fit: cover !important;
 }
 
 .carousel .carousel-inner .carousel-item img {
-    max-height: 200vh !important;
+    max-height: 300vh !important;
 }
 
 /**
@@ -411,4 +411,7 @@ body {
     max-height: 445px !important;
     margin: auto !important;
     display: block !important;
+}
+body > main > div > div > div > div > svg > image {
+    object-fit: cover !important;
 }

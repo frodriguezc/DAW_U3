@@ -3,22 +3,20 @@
 	include("cx.php");
 	$link = conectar();
 	//Se recuperan los parámetros desde la petición.
-	$rut = $_GET["id"];
-	$nombre = $_GET["name"];
-	$direccion = $_GET["address"];
-	$comuna = $_GET["comuna"];
-	$region = $_GET["region"];
-	$telefono = $_GET["phone"];
-	$email = $_GET["email"];
+	$nombre = $_GET["nombre"];
+	$email = $_GET["correo"];
+	$comentario = $_GET["comentarios"];
 	//Ejecutar la sentencia de inserción en la tabla.
-	$insert = "insert into users values('{$rut}','{$nombre}','{$direccion}',{$comuna}, {$region}, {$telefono}, {$email})";
+	$insert = "insert into comentarios(nombre, email, comentario) values('{$nombre}','{$email}','{$comentario})'";
 	//Si la inserción se lleva a cabo resultado es mayor que 0.
 	if (!mysqli_query($link, $insert)){
 		//Si la inserción se lleva a cabo correctamente se genera un mensaje como resultado.
+        $resultado = "Inserción ERROR";
 		$error = mysqli_error($link);
 	} else {
 		$resultado = "Inserción OK";
-	}
+        $error ="Inserción OK";
+    }
 	mysqli_close($link);
-	header("Location:form_mysql.php?dato={$resultado}&error={$error}");
+	header("Location:contacto.php?dato={$resultado}&error={$error}");
 ?>

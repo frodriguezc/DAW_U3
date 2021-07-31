@@ -1,0 +1,12 @@
+.foot1 {
+    height:  100px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+.foot2 {
+    width: 300px; border-radius: 30px;
+    margin-top: 10px;
+}
+h2 {
+    color: white;
+}

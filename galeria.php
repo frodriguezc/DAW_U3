@@ -41,67 +41,174 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registro.php">Registro</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        admin
+                        Clientes
                     </a>
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Ingreso</a></li>
+                        <li><a class="dropdown-item" href="login.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+                        <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<br/><br/>
 <!-- Contenido de la página web -->
-
-<!-- Apertura del contenedor de la página web -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
     <h2>Galería</h2>
     <h4 class="item">Algunas de sus obras...</h4>
-    <div class="row text-center">
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="servicios.php"><img src="img/armadura.jpg" alt="Armadura" width="400px" height="400px"
-                                             style="border-radius:40px ;"></a>
-                <p style="color: white;"><strong>Escultura de armadura</strong></p>
-                <p>Una escultura de cuerpo completo</p>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="servicios.php"><img src="collar.jpg" alt="collar" width="400px" height="400px"
-                                             style="border-radius:40px;"></a>
-                <p style="color: white;"><strong>collar</strong></p>
-                <p>accesorios los cuales vende</p>
-                <a href="artista/Artista.php"><p style="color: white;">Artista aquí...</p></a>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="servicios.php"><img src="pared.jpg" alt="craneos" width="400px" height="400px"
-                                             style="border-radius:40px;"></a>
-                <p style="color:white;"><strong>pared de craneos</strong></p>
-                <p>una escultura en forma de pared la cual es de craneos</p>
+</div>
+
+<main>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/armadura.jpg" height="100%" width="100%" /></svg>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Armadura</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc2.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Cabeza</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc1.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Muerte</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc3.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Lodo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc4.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Huesos</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc5.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Kali</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc6.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"onclick="window.location.href='contacto.php'">Comprar: Unicornio</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/pared.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Collar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/collar.jpg" height="100%" width="100%" /></svg>
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar: Pared</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</main>
 
-</div>
-<!--Cierre del contenedor de la página web -->
 
 <!--Pie de la página -->
 <footer class="text-center">
+    <link rel="stylesheet" href="css/style_foot.css"/>
 
-    <p style="color: white;">Redes Sociales</p>
+    <h2>Redes Sociales</h2>
 
-    <img src="Banner_1.jpg" class="img-responsive" alt="Responsive image "
-         style="height:  100px; width: 100%; margin-top: 0%">
-    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image"
-         style="width: 300px; border-radius: 30px;">
+    <img src="img/Banner_1.jpg" class="img-responsive foot1" alt="Ashes Of The Soul">
+    <img src="img/redes-sociales.jpg" class="img-responsive foot2" alt="Redes Sociales">
 </footer>
+<!-- Scripts de JavaScript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -149,8 +149,8 @@
  
 	<p style="color: white;">Redes Sociales</p> 
   		
-		<img src="Banner_1.jpg" class="img-responsive" alt="Responsive image "style="height:  100px; width: 100%; margin-top: 0%">
-    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image" style="width: 300px; border-radius: 30px;">
+		<img src="img/Banner_1.jpg" class="img-responsive" alt="Responsive image " style="height:  100px; width: 100%; margin-top: 0%">
+    <img src="img/redes-sociales.jpg" class="img-responsive" alt="Responsive image" style="width: 300px; border-radius: 30px;">
 	  </footer>
 
 	  

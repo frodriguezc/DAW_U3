@@ -9,11 +9,11 @@
 
     <!-- Stylesheet para vista index -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_contact.css">
 
     <!-- Link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Link Opcional de JavaScript -->
 
 </head>
 <body>
@@ -57,43 +57,6 @@
 
 <!-- Contenido de la página web -->
 
-<!-- Apertura del contenedor de la página web -->
-<div id="contact" class="container-fluid bg-grey">
-    <h2 class="text-center">CONTACTO</h2>
-    <div class="row">
-        <div class="col-sm-5">
-
-            <p>Gracias por mirar nuestro sitio</p>
-            <p><span class="glyphicon glyphicon-map-marker"></span>Esperamos que haya sido de tu mayor agrado</p>
-            <p><span class="glyphicon glyphicon-phone"></span>Contáctenos al +56 (9) 4054 7386</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> Cualquier duda o sugerencia escríbanos por aqui -->
-            </p>
-        </div>
-        <div class="col-sm-7">
-            <div class="row">
-                <div class="col-sm-6 form-group">
-                    <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text"
-                           style="border-radius: 20px;">
-                </div>
-                <div class="col-sm-6 form-group">
-                    <input class="form-control" id="correo" name="correo" placeholder="Correo Electrónico" type="email"
-                           style="border-radius: 20px;">
-                </div>
-            </div>
-            <textarea class="form-control" id="comentarios" name="comentarios" placeholder="Comentarios" rows="5"
-                      style="border-radius: 20px;"></textarea><br>
-            <div class="row">
-                <div class="col-sm-12 form-group">
-                    <a href="respuesta.php">
-                        <button class="btn btn-secondary" type="submit" style="border-radius: 5px;">Enviar</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /. Cierre del contenedor de la página web-->
-
 <!--conexion a la bd-->
 <?php
 include("cx.php");
@@ -102,138 +65,71 @@ $link = conectar();
 $resultado = mysqli_query($link, "select * from users");
 ?>
 
-<div class="container p-4">
-    <?php
-    if (isset($_SESSION['message'])) {
-        ?>
-        <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
-            <?= $_SESSION['message'] ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <?php session_unset();
-    } #Libera todas las variables de sesión
-    ?>
+<!-- Apertura del contenedor de la página web -->
+<div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACTO</h2>
     <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card card-body">
-                <form method="post" name="form" action="create.php">
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="id" class="form-control" placeholder="Ingresa RUT"
-                                   autocomplete="off"
-                                   autofocus>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="region" class="form-control" placeholder="Ingresa Región"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="tel" name="phone" class="form-control" placeholder="Ingresa Teléfono"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <input type="submit" class="btn btn-outline-success btn-block" name="send" value="Agregar">
-                    <input type="reset" class="btn btn-outline-secondary btn-block" value="Limpiar">
-                </form>
+        <div class="col-sm-5">
+            <p>Gracias por mirar nuestro sitio</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Esperamos que haya sido de tu mayor agrado</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Contáctenos al +56 (9) 4054 7386</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> Cualquier duda o sugerencia escríbanos por aqui.
+            </p>
+        </div>
+
+        <form action="comenta.php" class="col-sm-7 col-sm-6 col-sm-12>
+        <div class=" col-sm-7
+        ">
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <label for="nombre"></label><input class="form-control" id="nombre" name="nombre" placeholder="Nombre"
+                                                   type="text"
+                >
+            </div>
+            <div class="col-sm-6 form-group">
+                <label for="correo"></label><input class="form-control" id="correo" name="correo"
+                                                   placeholder="Correo Electrónico" type="email"
+                >
             </div>
         </div>
-        <!--End col-md-4-->
-        <div class="col-md-8 mx-auto">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                    <th>Telefono</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-
-                $link = conectar();
-                //Ejecutar la consulta para obtener información de la tabla.
-                $resultado = mysqli_query($link, "select * from users");
-
-                while ($row = mysqli_fetch_array($resultado)) {
-                    #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $row['rut'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['nombre'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['direccion'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['telefono'] ?>
-                        </td>
-                        <td>
-                            <a href="update.php?id=<?php echo $row['rut'] ?>" class="btn btn-secondary">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a href="delete.php?id=<?php echo $row['rut'] ?>" class="btn btn-danger">
-                                <i class="fa fa-trash"></i>
-                            </a>
-                        </td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
+        <label for="comentarios"></label><textarea class="form-control" id="comentarios" name="comentarios"
+                                                   placeholder="Comentarios" rows="5"
+        ></textarea><br>
+        <div class="row">
+            <div class="col-sm-12 form-group">
+                <a href="respuesta.php">
+                    <button class="btn btn-secondary" type="submit" style="border-radius: 5px;">Enviar</button>
+                </a>
+            </div>
         </div>
-        <!--End col-md-8-->
     </div>
-    <!--End row-->
+    </form>
 </div>
+
+
+<br><br>
+<!-- /. Cierre del contenedor de la página web-->
+
 <!--End container -->
 
 
 <!--Pie de la página -->
 <footer class="text-center">
+    <link rel="stylesheet" href="css/style_foot.css"/>
 
-    <p style="color: white;">Redes Sociales</p>
+    <h2>Redes Sociales</h2>
 
-    <img src="Banner_1.jpg" class="img-responsive" alt="Responsive image "
-         style="height:  100px; width: 100%; margin-top: 0%">
-    <img src="redes-sociales.jpg" class="img-responsive" alt="Responsive image"
-         style="width: 300px; border-radius: 30px;">
+    <img src="img/Banner_1.jpg" class="img-responsive foot1" alt="Ashes Of The Soul">
+    <img src="img/redes-sociales.jpg" class="img-responsive foot2" alt="Redes Sociales">
 </footer>
-
-
+<!-- Scripts de JavaScript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
