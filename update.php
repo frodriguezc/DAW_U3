@@ -54,13 +54,7 @@
         </div>
     </div>
 </nav>
-
-
-//TODO: agregar busqueda de usuarios para
-
 <!--conexion a la bd-->
-
-
 <div class="container p-4">
     <?php
     if (isset($_SESSION['message'])) {
@@ -75,69 +69,92 @@
     } #Libera todas las variables de sesión
     ?>
 
-    <div class="container">
 
-        <div class="page-header">
-            <h2>Modificar datos cliente</h2>
-        </div>
+    <div class="page-header">
+        <h2>Modificar datos cliente</h2>
+    </div>
 
-        <div class="row">
-            <div class="">
-                <?php
-                include("cx.php");
-                $link = conectar();
-                $query = "SELECT * FROM users WHERE rut='" . $_GET["rut"] . "'";
-                $result=mysqli_query($link,$query);
+    <div>
+        <?php
+        include("cx.php");
+        $link = conectar();
+        $query = "SELECT * FROM users WHERE rut='" . $_GET["rut"] . "'";
+        $result = mysqli_query($link, $query);
+        $customer = mysqli_fetch_assoc($result);
+        ?>
+        <form action="update-process.php" method="POST" class="row g-3">
 
-                $customer = mysqli_fetch_assoc($result);
+            <div class="col-md-6">
+                <label for="rut" class="form-control">RUT
+                    <input type="text" name="rut" class="form-control" value="<?php echo $customer['rut']; ?>"
+                           required>
 
-
-                ?>
-                <form action="update-process.php" method="POST" class="row g-3">
-
-                    <div class="form-group col-md-6">
-                        <label for="rut">RUT
-                            <input type="text" name="rut" class="form-control" value="<?php echo $customer['rut']; ?>" required="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="nombre">Nombre
-                            <input type="text" name="nombre" class="form-control" value="<?php echo $customer['nombre']; ?>" required="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="direccion">Direccion
-                            <input type="text" name="direccion" class="form-control" value="<?php echo $customer['direccion']; ?>" required="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="comuna">Comuna
-                            <input type="text" name="comuna" class="form-control" value="<?php echo $customer['comuna']; ?>" required="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="region">Region
-                            <input type="text" name="region" class="form-control" value="<?php echo $customer['region']; ?>" required="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="telefono">Telefono
-                            <input type="text" name="telefono" class="form-control" value="<?php echo $customer['telefono']; ?>" required="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="email">e-mail
-                            <input type="text" name="email" class="form-control" value="<?php echo $customer['email']; ?>" required="">
-                        </label>
-                    </div>
-
-
-
-                    <button type="submit" class="btn btn-primary" value="submit">Submit</button>
-
-                </form>
             </div>
-        </div>
+            <div class="col-md-6">
+                <label for="nombre" class="form-control">Nombre
+                    <input type="text" name="nombre" class="form-control" value="<?php echo $customer['nombre']; ?>"
+                           required>
+                </label>
+            </div>
+            <div class="col-md-12">
+                <label for="direccion" class="form-control">Direccion
+                    <input type="text" name="direccion" class="form-control"
+                           value="<?php echo $customer['direccion']; ?>" required>
+                </label>
+            </div>
+            <div class="col-md-6">
+                <label for="comuna" class="form-control">Comuna
+                    <input type="text" name="comuna" class="form-control" value="<?php echo $customer['comuna']; ?>"
+                           required>
+                </label>
+            </div>
+<!--            <div class="col-md-6">-->
+<!--                <label for="region" class="form-control">Region-->
+<!--                    <input type="text" name="region" class="form-control" value="--><?php //echo $customer['region']; ?><!--"-->
+<!--                           required="">-->
+<!--                </label>-->
+<!--            </div>-->
+
+            <div class="col-md-6">
+                <label for="region" class="form-label">Region</label>
+                <select id="region" class="form-select" required>
+                    <option selected value="<?php echo $customer['region']; ?>">Sin Cambios</option>
+                    <option value="arica">Arica y Parinacota</option>
+                    <option value="tarapaca">Tarapaca</option>
+                    <option value="antofagasta">Antofagasta</option>
+                    <option value="atacama">Atacama</option>
+                    <option value="coquimbo">Coquimbo</option>
+                    <option value="valparaiso">Valparaiso</option>
+                    <option value="metropolitana">Metropolitana</option>
+                    <option value="ohiggins">O'Higgins</option>
+                    <option value="maule">Maule</option>
+                    <option value="nuble">Ñuble</option>
+                    <option value="biobio">Biobio</option>
+                    <option value="araucania">Araucania</option>
+                    <option value="losrios">Los Rios</option>
+                    <option value="loslagos">Los Lagos</option>
+                    <option value="aysen">Aysen</option>
+                    <option value="magallanes">Magallanes</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="telefono" class="form-control">Telefono
+                    <input type="text" name="telefono" class="form-control"
+                           value="<?php echo $customer['telefono']; ?>" required>
+                </label>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-control">e-mail
+                    <input type="text" name="email" class="form-control" value="<?php echo $customer['email']; ?>"
+                           required>
+                </label>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" value="submit">Modificar</button>
+                <button type="reset" class="btn btn-primary" value="reset">Limpiar</button>
+            </div>
+        </form>
     </div>
 
 </div>
