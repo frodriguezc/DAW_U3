@@ -11,7 +11,7 @@ $password = $_GET["password"];
 $query = "select * from admin where username = '{$username}' and password = '{$password}'";
 //Si la inserción se lleva a cabo resultado es mayor que 0.
 if (!mysqli_query($link, $query)) {
-    //Si la inserción se lleva a cabo correctamente se genera un mensaje como resultado.
+
     $error = mysqli_error($link);
     mysqli_close($link);
 

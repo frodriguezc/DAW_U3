@@ -70,9 +70,9 @@
         </div>
 
         <!-- Login Form -->
-        <form>
-            <label for="username"></label><input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-            <label for="password"></label><input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+        <form action="ingreso.php" method="post">
+            <label for="username"></label><input type="text" id="username" class="fadeIn second" name="username" placeholder="Administrator">
+            <label for="password"></label><input type="text" id="password" class="fadeIn third" name="password" placeholder="Passowrd">
             <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
 

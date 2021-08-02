@@ -59,12 +59,7 @@
 //TODO: agregar busqueda de usuarios para
 
 <!--conexion a la bd-->
-<?php
-include("cx.php");
-$link = conectar();
-//Ejecutar la consulta para obtener información de la tabla.
-$resultado = mysqli_query($link, "select * from users");
-?>
+
 
 <div class="container p-4">
     <?php
@@ -79,68 +74,72 @@ $resultado = mysqli_query($link, "select * from users");
         <?php session_unset();
     } #Libera todas las variables de sesión
     ?>
-    <div class="row">
-        <div class="col-md mx-auto">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>RUT</th>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                    <th>Comuna</th>
-                    <th>Region</th>
-                    <th>Telefono</th>
-                    <th>Correo electronico</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
 
-                $link = conectar();
-                //Ejecutar la consulta para obtener información de la tabla.
-                $resultado = mysqli_query($link, "select * from users");
+    <div class="container">
 
-                while ($row = mysqli_fetch_array($resultado)) {
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $row['rut'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['nombre'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['direccion'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['comuna'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['region'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['telefono'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['email'] ?>
-                        </td>
-                        <td>
-                            <a href="update.php?rut=<?php echo $row['rut'] ?>" class="btn btn-secondary">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a href="delete.php?rut=<?php echo $row['rut'] ?>" class="btn btn-danger">
-                                <i class="fa fa-trash"></i>
-                            </a>
-                        </td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
+        <div class="page-header">
+            <h2>Modificar datos cliente</h2>
         </div>
-        <!--End col-md-8-->
+
+        <div class="row">
+            <div class="">
+                <?php
+                include("cx.php");
+                $link = conectar();
+                $query = "SELECT * FROM users WHERE rut='" . $_GET["rut"] . "'";
+                $result=mysqli_query($link,$query);
+
+                $customer = mysqli_fetch_assoc($result);
+
+
+                ?>
+                <form action="update-process.php" method="POST" class="row g-3">
+
+                    <div class="form-group col-md-6">
+                        <label for="rut">RUT
+                            <input type="text" name="rut" class="form-control" value="<?php echo $customer['rut']; ?>" required="">
+                        </label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="nombre">Nombre
+                            <input type="text" name="nombre" class="form-control" value="<?php echo $customer['nombre']; ?>" required="">
+                        </label>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="direccion">Direccion
+                            <input type="text" name="direccion" class="form-control" value="<?php echo $customer['direccion']; ?>" required="">
+                        </label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="comuna">Comuna
+                            <input type="text" name="comuna" class="form-control" value="<?php echo $customer['comuna']; ?>" required="">
+                        </label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="region">Region
+                            <input type="text" name="region" class="form-control" value="<?php echo $customer['region']; ?>" required="">
+                        </label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="telefono">Telefono
+                            <input type="text" name="telefono" class="form-control" value="<?php echo $customer['telefono']; ?>" required="">
+                        </label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">e-mail
+                            <input type="text" name="email" class="form-control" value="<?php echo $customer['email']; ?>" required="">
+                        </label>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
     </div>
-    <!--End row-->
+
 </div>
 <!--End container -->
 <!--Pie de la página -->
