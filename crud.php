@@ -58,7 +58,6 @@
 <br/><br/>
 
 
-//TODO: agregar busqueda de usuarios para
 
 <!--conexion a la bd-->
 <?php

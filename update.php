@@ -148,7 +148,6 @@
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary" value="submit">Modificar</button>
                 <button type="reset" class="btn btn-primary" onclick="history.go(-1)">Volver</button>
-<!--                TODO: cambiar el action del reset con un back-->
             </div>
         </form>
     </div>
