@@ -79,7 +79,7 @@ $resultado = mysqli_query($link, "select * from users");
     } #Libera todas las variables de sesión
     ?>
 
-    <form class="row g-3" action="create.php" method="post">
+    <form class="row g-3" action="create.php" method="get">
         <div class="col-md-6">
             <label for="rut" class="form-label">RUT</label>
             <input type="text" class="form-control" id="rut" required>

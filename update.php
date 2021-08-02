@@ -69,7 +69,6 @@
     } #Libera todas las variables de sesión
     ?>
 
-
     <div class="page-header">
         <h2>Modificar datos cliente</h2>
     </div>
@@ -82,11 +81,11 @@
         $result = mysqli_query($link, $query);
         $customer = mysqli_fetch_assoc($result);
         ?>
-        <form action="update-process.php" method="POST" class="row g-3">
+        <form action="update-process.php" method="get" class="row g-3">
 
             <div class="col-md-6">
                 <label for="rut" class="form-control">RUT
-                    <input type="text" name="rut" class="form-control" value="<?php echo $customer['rut']; ?>"
+                    <input id="rut" type="text" name="rut" class="form-control" value="<?php echo $customer['rut']; ?>"
                            required>
 
             </div>
@@ -108,33 +107,27 @@
                            required>
                 </label>
             </div>
-<!--            <div class="col-md-6">-->
-<!--                <label for="region" class="form-control">Region-->
-<!--                    <input type="text" name="region" class="form-control" value="--><?php //echo $customer['region']; ?><!--"-->
-<!--                           required="">-->
-<!--                </label>-->
-<!--            </div>-->
 
             <div class="col-md-6">
                 <label for="region" class="form-label">Region</label>
-                <select id="region" class="form-select" required>
-                    <option selected value="<?php echo $customer['region']; ?>">Sin Cambios</option>
-                    <option value="arica">Arica y Parinacota</option>
-                    <option value="tarapaca">Tarapaca</option>
-                    <option value="antofagasta">Antofagasta</option>
-                    <option value="atacama">Atacama</option>
-                    <option value="coquimbo">Coquimbo</option>
-                    <option value="valparaiso">Valparaiso</option>
-                    <option value="metropolitana">Metropolitana</option>
-                    <option value="ohiggins">O'Higgins</option>
-                    <option value="maule">Maule</option>
-                    <option value="nuble">Ñuble</option>
-                    <option value="biobio">Biobio</option>
-                    <option value="araucania">Araucania</option>
-                    <option value="losrios">Los Rios</option>
-                    <option value="loslagos">Los Lagos</option>
-                    <option value="aysen">Aysen</option>
-                    <option value="magallanes">Magallanes</option>
+                <select id="region" class="form-select" name="region" required>
+                    <option selected value="<?php echo $customer['region']; ?>"><?php echo $customer['region']; ?></option>
+                    <option value="Arica y Parinacota">Arica y Parinacota</option>
+                    <option value="Tarapaca">Tarapaca</option>
+                    <option value="Antofagasta">Antofagasta</option>
+                    <option value="Atacama">Atacama</option>
+                    <option value="Coquimbo">Coquimbo</option>
+                    <option value="Valparaiso">Valparaiso</option>
+                    <option value="Metropolitana">Metropolitana</option>
+                    <option value="O Higgins">O'Higgins</option>
+                    <option value="Maule">Maule</option>
+                    <option value="Ñuble">Ñuble</option>
+                    <option value="Biobio">Biobio</option>
+                    <option value="Araucania">Araucania</option>
+                    <option value="Los Rios">Los Rios</option>
+                    <option value="Los Lagos">Los Lagos</option>
+                    <option value="Aysen">Aysen</option>
+                    <option value="Magallanes">Magallanes</option>
                 </select>
             </div>
 
@@ -153,6 +146,7 @@
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary" value="submit">Modificar</button>
                 <button type="reset" class="btn btn-primary" value="reset">Limpiar</button>
+<!--                TODO: cambiar el action del reset con un back-->
             </div>
         </form>
     </div>
