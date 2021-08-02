@@ -72,11 +72,18 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/armadura.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/armadura.jpg" height="100%" width="100%"/>
+                        </svg>
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Armadura</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Armadura
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -84,12 +91,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc2.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/esc2.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Cabeza</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Cabeza
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -97,12 +111,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc1.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/esc1.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Muerte</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Muerte
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -110,12 +131,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc3.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/esc3.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Lodo</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Lodo
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -123,12 +151,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc4.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/esc4.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Huesos</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Huesos
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -136,12 +171,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc5.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/esc5.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Kali</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Kali
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -149,12 +191,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/esc6.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/esc6.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"onclick="window.location.href='contacto.php'">Comprar: Unicornio</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Unicornio
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -162,12 +211,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/pared.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/pared.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='contacto.php'">Comprar: Collar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Collar
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -175,12 +231,19 @@
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="100%" height="100%""/><image xlink:href="img/collar.jpg" height="100%" width="100%" /></svg>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="350"
+                             xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <rect width="100%" height="100%"
+                            "/>
+                            <image xlink:href="img/collar.jpg" height="100%" width="100%"/>
+                        </svg>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar: Pared</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            onclick="window.location.href='contacto.php'">Comprar: Pared
+                                    </button>
                                 </div>
                             </div>
                         </div>

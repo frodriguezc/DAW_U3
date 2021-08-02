@@ -8,6 +8,7 @@
 
     <!-- Stylesheet para vista index -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_login.css">
 
     <!-- Link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,11 +18,12 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container-fluid">
-        <div class="container">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid ">
+        <div class="container ">
             <a class="navbar-brand" href="index.php">
-                <img src="img/ashes_logo.png" alt="Home" style="max-width:150px; border-radius:20px;"
+                <img src="img/ashes_logo.png" alt="Home"
                      class="img-responsive">
             </a>
         </div>
@@ -30,7 +32,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                 </li>
@@ -43,55 +45,57 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        admin
+                        Ingreso
                     </a>
-                    <ul class="dropdown-menu bg-dark align-content-center" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Ingreso</a></li>
+                    <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+                        <li><a class="dropdown-item" href="admin.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<br/><br/>
 
-<form action="action_page.php" method="post">
-    <div class="imgcontainer">
-        <img src="img/sculptor.png" alt="Avatar" class="avatar">
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="img/ashes_logo.png" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form>
+            <label for="username"></label><input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
+            <label for="password"></label><input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+<!--        Remind Passowrd -->
+<!--        <div id="formFooter">-->
+<!--            <a class="underlineHover" href="#">Forgot Password?</a>-->
+<!--        </div>-->
+
     </div>
+</div>
 
-
-    <div class="container">
-        <label for="user"><b>Nombre de Usuario</b></label>
-        <input type="text" placeholder="Ingrese su Usuario " name="user" required>
-
-
-        <label for="password"><b>Contraseña</b></label>
-        <input type="password" placeholder="Ingrese su Contraseña" name="password" required>
-
-
-        <button type="submit">Ingresar</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Recuérdame
-        </label>
-    </div>
-
-
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Olvido su <a href="#">Contraseña?</a></span>
-    </div>
-</form>
+<br>
+<br>
 
 <!--Pie de la página -->
+<!--Pie de la página -->
 <footer class="text-center">
+    <link rel="stylesheet" href="css/style_foot.css"/>
 
-    <p style="color: white;">Redes Sociales</p>
+    <h2>Redes Sociales</h2>
 
-    <img src="img/Banner_1.jpg" class="img-responsive" alt="Responsive image "
-         style="height:  100px; width: 100%; margin-top: 10%">
-    <img src="img/redes-sociales.jpg" class="img-responsive" alt="Responsive image"
-         style="width: 300px; border-radius: 30px;">
+    <img src="img/Banner_1.jpg" class="img-responsive foot1" alt="Ashes Of The Soul">
+    <img src="img/redes-sociales.jpg" class="img-responsive foot2" alt="Redes Sociales">
 </footer>
 <!-- Scripts de JavaScript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

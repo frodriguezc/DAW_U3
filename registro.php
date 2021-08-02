@@ -41,16 +41,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="registro.php">Registro</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         Ingreso
                     </a>
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Registro</a></li>
+                        <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
                         <li><a class="dropdown-item" href="admin.php">Admin</a></li>
                     </ul>
@@ -81,112 +78,129 @@ $resultado = mysqli_query($link, "select * from users");
         <?php session_unset();
     } #Libera todas las variables de sesión
     ?>
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card card-body">
-                <form method="post" name="form" action="create.php">
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="id" class="form-control" placeholder="Ingresa RUT"
-                                   autocomplete="off"
-                                   autofocus>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="text" name="region" class="form-control" placeholder="Ingresa Región"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="tel" name="phone" class="form-control" placeholder="Ingresa Teléfono"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail"
-                                   autocomplete="off" required>
-                        </label>
-                    </div>
-                    <input type="submit" class="btn btn-outline-success btn-block" name="send" value="Agregar">
-                    <input type="reset" class="btn btn-outline-secondary btn-block" value="Limpiar">
-                </form>
-            </div>
-        </div>
-        <!--End col-md-4-->
-        <div class="col-md-8 mx-auto">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                    <th>Telefono</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
 
-                $link = conectar();
-                //Ejecutar la consulta para obtener información de la tabla.
-                $resultado = mysqli_query($link, "select * from users");
-
-                while ($row = mysqli_fetch_array($resultado)) {
-                    #Obtiene una fila de resultados como un array asociativo, numérico, o ambos
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $row['rut'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['nombre'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['direccion'] ?>
-                        </td>
-                        <td>
-                            <?php echo $row['telefono'] ?>
-                        </td>
-                        <td>
-                            <a href="update.php?id=<?php echo $row['rut'] ?>" class="btn btn-secondary">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a href="delete.php?id=<?php echo $row['rut'] ?>" class="btn btn-danger">
-                                <i class="fa fa-trash"></i>
-                            </a>
-                        </td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
+    <form class="row g-3" action="create.php" method="post">
+        <div class="col-md-6">
+            <label for="rut" class="form-label">RUT</label>
+            <input type="text" class="form-control" id="rut" required>
         </div>
-        <!--End col-md-8-->
-    </div>
-    <!--End row-->
-</div>
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="col-12">
+            <label for="direccion" class="form-label">Direccion</label>
+            <input type="text" class="form-control" id="direccion" required>
+        </div>
+        <div class="col-md-6">
+            <label for="comuna" class="form-label">Comuna</label>
+            <input type="text" class="form-control" id="comuna" required>
+        </div>
+        <div class="col-md-6">
+            <label for="region" class="form-label">Region</label>
+            <select id="region" class="form-select" required>
+                <option selected>Seleccione</option>
+                <option value="arica">Arica y Parinacota</option>
+                <option value="tarapaca">Tarapaca</option>
+                <option value="antofagasta">Antofagasta</option>
+                <option value="atacama">Atacama</option>
+                <option value="coquimbo">Coquimbo</option>
+                <option value="valparaiso">Valparaiso</option>
+                <option value="metropolitana">Metropolitana</option>
+                <option value="ohiggins">O'Higgins</option>
+                <option value="maule">Maule</option>
+                <option value="nuble">Ñuble</option>
+                <option value="biobio">Biobio</option>
+                <option value="araucania">Araucania</option>
+                <option value="losrios">Los Rios</option>
+                <option value="loslagos">Los Lagos</option>
+                <option value="aysen">Aysen</option>
+                <option value="magallanes">Magallanes</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="tel" class="form-control" id="telefono" required>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Correo electronico</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <button type="reset" class="btn btn-secondary">Cancelar</button>
+        </div>
+    </form>
+
+
+
+
+
+<!---->
+<!---->
+<!---->
+<!--    <div class="row">-->
+<!--        <div class="mx-auto container container-fluid container-md">-->
+<!--            <div class="card card-body">-->
+<!--                <form method="post" name="form" action="create.php">-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="id" class="form-control" placeholder="Ingresa RUT"-->
+<!--                                   autocomplete="off"-->
+<!--                                   autofocus>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="name" class="form-control" placeholder="Ingresa Nombre"-->
+<!--                                   autocomplete="off" required>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="address" class="form-control" placeholder="Ingresa Dirección"-->
+<!--                                   autocomplete="off" required>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="comuna" class="form-control" placeholder="Ingresa Comuna"-->
+<!--                                   autocomplete="off" required>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="text" name="region" class="form-control" placeholder="Ingresa Región"-->
+<!--                                   autocomplete="off" required>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="tel" name="phone" class="form-control" placeholder="Ingresa Teléfono"-->
+<!--                                   autocomplete="off" required>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label>-->
+<!--                            <input type="email" name="email" class="form-control" placeholder="Ingresa e-mail"-->
+<!--                                   autocomplete="off" required>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <input type="submit" class="btn btn-outline-success btn-block" name="send" value="Agregar">-->
+<!--                    <input type="reset" class="btn btn-outline-secondary btn-block" value="Limpiar">-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    End row-->
+<!--</div>-->
 <!--End container -->
 <!--Pie de la página -->
+
+    <br>
+    <br>
 <footer class="text-center">
     <link rel="stylesheet" href="css/style_foot.css"/>
 
