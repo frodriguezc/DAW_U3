@@ -50,7 +50,7 @@
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
-                        <li><a class="dropdown-item" href="admin.php">Admin</a></li>
+                        <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
@@ -101,9 +101,7 @@ $resultado = mysqli_query($link, "select * from users");
         ></textarea><br>
         <div class="row">
             <div class="col-sm-12 form-group">
-                <a href="respuesta.php">
                     <button class="btn btn-secondary" type="submit" style="border-radius: 5px;">Enviar</button>
-                </a>
             </div>
         </div>
     </div>

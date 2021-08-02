@@ -41,16 +41,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.php">Contacto</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="registro.php">Registro</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Clientes
+                        Ingreso
                     </a>
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Registro</a></li>
+                        <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
                         <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>

@@ -49,7 +49,7 @@
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
-                        <li><a class="dropdown-item" href="admin.php">Admin</a></li>
+                        <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
@@ -82,23 +82,23 @@ $resultado = mysqli_query($link, "select * from users");
     <form class="row g-3" action="create.php" method="get">
         <div class="col-md-6">
             <label for="rut" class="form-label">RUT</label>
-            <input type="text" class="form-control" id="rut" required>
+            <input type="text" class="form-control" id="rut" name="rut" required>
         </div>
         <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" required>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
         </div>
         <div class="col-12">
             <label for="direccion" class="form-label">Direccion</label>
-            <input type="text" class="form-control" id="direccion" required>
+            <input type="text" class="form-control" id="direccion" name="direccion" required>
         </div>
         <div class="col-md-6">
             <label for="comuna" class="form-label">Comuna</label>
-            <input type="text" class="form-control" id="comuna" required>
+            <input type="text" class="form-control" id="comuna" name="comuna"required>
         </div>
         <div class="col-md-6">
             <label for="region" class="form-label">Region</label>
-            <select id="region" class="form-select" required>
+            <select id="region" class="form-select" name="region" required>
                 <option selected>Seleccione</option>
                 <option value="arica">Arica y Parinacota</option>
                 <option value="tarapaca">Tarapaca</option>
@@ -120,11 +120,11 @@ $resultado = mysqli_query($link, "select * from users");
         </div>
         <div class="col-md-6">
             <label for="telefono" class="form-label">Telefono</label>
-            <input type="tel" class="form-control" id="telefono" required>
+            <input type="tel" class="form-control" id="telefono" name="telefono" required>
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">Correo electronico</label>
-            <input type="email" class="form-control" id="email" required>
+            <input type="email" class="form-control" id="email" name="email" required>
         </div>
 
 

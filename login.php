@@ -50,7 +50,7 @@
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
-                        <li><a class="dropdown-item" href="admin.php">Admin</a></li>
+                        <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>

@@ -43,17 +43,19 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        admin
+                        Ingreso
                     </a>
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Ingreso</a></li>
+                        <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+                        <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<br/><br/>
 
 
 //TODO: agregar busqueda de usuarios para

@@ -43,17 +43,19 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        admin
+                        Ingreso
                     </a>
                     <ul class="dropdown-menu bg-dark align-content-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="login.php">Ingreso</a></li>
+                        <li><a class="dropdown-item" href="registro.php">Registro</a></li>
                         <li><a class="dropdown-item" href="logout.php">Salir</a></li>
+                        <li><a class="dropdown-item" href="login.php">Admin</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<br/><br/>
 <!--conexion a la bd-->
 <div class="container p-4">
     <?php
@@ -145,7 +147,7 @@
             </div>
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary" value="submit">Modificar</button>
-                <button type="reset" class="btn btn-primary" value="reset">Limpiar</button>
+                <button type="reset" class="btn btn-primary" onclick="history.go(-1)">Volver</button>
 <!--                TODO: cambiar el action del reset con un back-->
             </div>
         </form>
