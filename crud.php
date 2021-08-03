@@ -66,6 +66,7 @@ $link = conectar();
 //Ejecutar la consulta para obtener información de la tabla.
 $resultado = mysqli_query($link, "select * from users");
 ?>
+<div class="text-center"><h1>Clientes registrados</h1></div><br><br>
 
 <div class="container p-4">
     <?php
@@ -140,6 +141,56 @@ $resultado = mysqli_query($link, "select * from users");
             </table>
         </div>
         <!--End col-md-8-->
+    </div>
+
+    <br><br>
+    <div class="text-center"><h1>Comentarios recibidos</h1></div><br><br>
+    <div class="col-md mx-auto">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>Correo electronico</th>
+                <th>Comentario</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+
+            $link = conectar();
+            //Ejecutar la consulta para obtener información de la tabla.
+            $resultado = mysqli_query($link, "select * from comentarios");
+
+            while ($row = mysqli_fetch_array($resultado)) {
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $row['indice'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['nombre'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['email'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['comentario'] ?>
+                    </td>
+                    <td>
+                        <a href="delete.php?rut=<?php echo $row['indice'] ?>" class="btn btn-danger">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+
     </div>
     <!--End row-->
 </div>

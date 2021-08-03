@@ -75,7 +75,7 @@ $resultado = mysqli_query($link, "select * from users");
     <div class="row">
         <div class="col-sm-5">
             <p>Gracias por mirar nuestro sitio</p>
-            <p><span class="glyphicon glyphicon-map-marker"></span>Esperamos que haya sido de tu mayor agrado</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Si quieres enviarnos tus comentarios o cotizar envíanos tu mensaje</p>
             <p><span class="glyphicon glyphicon-phone"></span>Contáctenos al +56 (9) 4054 7386</p>
             <p><span class="glyphicon glyphicon-envelope"></span> Cualquier duda o sugerencia escríbanos por aqui.
             </p>

@@ -78,6 +78,7 @@ $resultado = mysqli_query($link, "select * from users");
         <?php session_unset();
     } #Libera todas las variables de sesión
     ?>
+    <div class="text-center"><h1>Registro de clientes</h1></div><br><br>
 
     <form class="row g-3" action="create.php" method="get">
         <div class="col-md-6">
@@ -86,7 +87,7 @@ $resultado = mysqli_query($link, "select * from users");
         </div>
         <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
+            <input type="text" class="form-control" id="nombre" name="nombre" minlength="5" maxlength="50" required>
         </div>
         <div class="col-12">
             <label for="direccion" class="form-label">Direccion</label>
@@ -100,31 +101,31 @@ $resultado = mysqli_query($link, "select * from users");
             <label for="region" class="form-label">Region</label>
             <select id="region" class="form-select" name="region" required>
                 <option selected>Seleccione</option>
-                <option value="arica">Arica y Parinacota</option>
-                <option value="tarapaca">Tarapaca</option>
-                <option value="antofagasta">Antofagasta</option>
-                <option value="atacama">Atacama</option>
-                <option value="coquimbo">Coquimbo</option>
-                <option value="valparaiso">Valparaiso</option>
-                <option value="metropolitana">Metropolitana</option>
-                <option value="ohiggins">O'Higgins</option>
-                <option value="maule">Maule</option>
-                <option value="nuble">Ñuble</option>
-                <option value="biobio">Biobio</option>
-                <option value="araucania">Araucania</option>
-                <option value="losrios">Los Rios</option>
-                <option value="loslagos">Los Lagos</option>
-                <option value="aysen">Aysen</option>
-                <option value="magallanes">Magallanes</option>
+                <option value="Arica y Parinacota">Arica y Parinacota</option>
+                <option value="Tarapaca">Tarapaca</option>
+                <option value="Antofagasta">Antofagasta</option>
+                <option value="Atacama">Atacama</option>
+                <option value="Coquimbo">Coquimbo</option>
+                <option value="Valparaiso">Valparaiso</option>
+                <option value="Metropolitana">Metropolitana</option>
+                <option value="O'Higgins">O'Higgins</option>
+                <option value="Maule">Maule</option>
+                <option value="Ñuble">Ñuble</option>
+                <option value="Biobio">Biobio</option>
+                <option value="Araucania">Araucania</option>
+                <option value="Los Rios">Los Rios</option>
+                <option value="Los Lagos">Los Lagos</option>
+                <option value="Aysen">Aysen</option>
+                <option value="Magallanes">Magallanes</option>
             </select>
         </div>
         <div class="col-md-6">
             <label for="telefono" class="form-label">Telefono</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono" required>
+            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="^[9|8|7|6]d{8}$" placeholder="912345678" required>
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">Correo electronico</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nombre@correo.com" required>
         </div>
 
 

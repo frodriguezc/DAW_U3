@@ -59,7 +59,7 @@
 <br/><br/>
 <!-- Contenido de la página web -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
-    <h2>Galería</h2>
+    <h1>Galería</h1>
     <h4 class="item">Algunas de sus obras...</h4>
 </div>
 
