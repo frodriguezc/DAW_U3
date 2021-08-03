@@ -153,6 +153,7 @@ $resultado = mysqli_query($link, "select * from users");
                 <th>Nombre</th>
                 <th>Correo electronico</th>
                 <th>Comentario</th>
+                <th>Fecha</th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -177,6 +178,9 @@ $resultado = mysqli_query($link, "select * from users");
                     </td>
                     <td>
                         <?php echo $row['comentario'] ?>
+                    </td>
+                    <td>
+                        <?php echo $row['fecha'] ?>
                     </td>
                     <td>
                         <a href="delete_comentario.php?indice=<?php echo $row['indice'] ?>" class="btn btn-danger">

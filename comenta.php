@@ -3,11 +3,13 @@
 include("cx.php");
 $link = conectar();
 //Se recuperan los parámetros desde la petición.
+date_default_timezone_set('America/Santiago');
 $nombre = $_GET["nombre"];
 $email = $_GET["correo"];
 $comentario = $_GET["comentarios"];
+$date = date('d/M/Y h:i:s a', time());
 //Ejecutar la sentencia de inserción en la tabla.
-$insert = "insert into comentarios(nombre, email, comentario) values('{$nombre}','{$email}','{$comentario}')";
+$insert = "insert into comentarios(nombre, email, comentario, fecha) values('{$nombre}','{$email}','{$comentario}', '{$date}')";
 //Si la inserción se lleva a cabo resultado es mayor que 0.
 if (!mysqli_query($link, $insert)) {
     //Si la inserción se lleva a cabo correctamente se genera un mensaje como resultado.
