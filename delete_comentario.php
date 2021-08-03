@@ -10,10 +10,10 @@ if (!mysqli_query($link, $delete)){
     $error = "ERROR: " .mysqli_error($link);
     echo "<p>{$error}</p>";
 } else {
-    $resultado = "Has eliminado a este comentario... ahora vovleras al login de administrador";
+    $resultado = "Has eliminado a este comentario...";
     echo "<script>
 alert('{$resultado}');
-window.location.href='login.php';
+window.location.href='crud.php';
 </script>";
 
 }

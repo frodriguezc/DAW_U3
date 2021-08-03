@@ -82,7 +82,7 @@ $resultado = mysqli_query($link, "select * from users");
         </div>
 
         <form action="comenta.php" class="col-sm-7 col-sm-6 col-sm-12>
-        <div class=" col-sm-7
+        <div class=" col-sm-6
         ">
         <div class="row">
             <div class="col-sm-6 form-group">

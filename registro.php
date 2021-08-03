@@ -95,7 +95,7 @@ $resultado = mysqli_query($link, "select * from users");
         </div>
         <div class="col-md-6">
             <label for="comuna" class="form-label">Comuna</label>
-            <input type="text" class="form-control" id="comuna" name="comuna"required>
+            <input type="text" class="form-control" id="comuna" name="comuna" required>
         </div>
         <div class="col-md-6">
             <label for="region" class="form-label">Region</label>
@@ -121,7 +121,7 @@ $resultado = mysqli_query($link, "select * from users");
         </div>
         <div class="col-md-6">
             <label for="telefono" class="form-label">Telefono</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="^[9|8|7|6]d{8}$" placeholder="912345678" required>
+            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="^[9|8|7|6]\d{8}$" placeholder="912345678" required>
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">Correo electronico</label>
