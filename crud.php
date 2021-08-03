@@ -179,7 +179,7 @@ $resultado = mysqli_query($link, "select * from users");
                         <?php echo $row['comentario'] ?>
                     </td>
                     <td>
-                        <a href="delete.php?rut=<?php echo $row['indice'] ?>" class="btn btn-danger">
+                        <a href="delete_comentario.php?indice=<?php echo $row['indice'] ?>" class="btn btn-danger">
                             <i class="fa fa-trash"></i>
                         </a>
                     </td>
